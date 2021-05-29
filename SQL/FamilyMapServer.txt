@@ -1,0 +1,40 @@
+CREATE TABLE IF NOT EXISTS "Users" (
+	"Username"	text NOT NULL,
+	"Password"	text NOT NULL,
+	"Email"	text NOT NULL,
+	"First_Name"	text NOT NULL,
+	"Last_Name"	text NOT NULL,
+	"Gender"	text NOT NULL,
+	"Person_ID"	text NOT NULL,
+	PRIMARY KEY("Username")
+);
+CREATE TABLE IF NOT EXISTS "Persons" (
+	"Person_ID"	text NOT NULL,
+	"Username"	text NOT NULL,
+	"First_Name"	text NOT NULL,
+	"Last_Name"	text NOT NULL,
+	"Gender"	text NOT NULL,
+	"Father_ID"	int,
+	"Mother_ID"	int,
+	"Spouse_ID"	int,
+	PRIMARY KEY("Person_ID")
+);
+CREATE TABLE IF NOT EXISTS "Events" (
+	"EventID"	text NOT NULL UNIQUE,
+	"AssociatedUsername"	text NOT NULL,
+	"PersonID"	text NOT NULL,
+	"Latitude"	float NOT NULL,
+	"Longitude"	float NOT NULL,
+	"Country"	text NOT NULL,
+	"City"	text NOT NULL,
+	"EventType"	text NOT NULL,
+	"Year"	int NOT NULL,
+	PRIMARY KEY("EventID"),
+	FOREIGN KEY("AssociatedUsername") REFERENCES "Users"("Username"),
+	FOREIGN KEY("PersonID") REFERENCES "Persons"("PersonID")
+);
+CREATE TABLE IF NOT EXISTS "AuthToken" (
+	"Username"	text NOT NULL,
+	"Auth_Token"	text NOT NULL UNIQUE,
+	PRIMARY KEY("Username")
+);

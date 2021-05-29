@@ -1,0 +1,15 @@
+[Fri May 28 23:00:10 MDT 2021] - INFO passoff.ServerTest: 	Setting up Persistence Test...
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Proxy: 	Clear called
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Client: 	Post without Request Body called
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Client: 	Attempting to open connection to server
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Client: 	Connection opened to server
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Client: 	Setting passoffrequest method to POST
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Client: 	Request method set to POST
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Client: 	Setting Do Output to true
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Client: 	Do Output set to true
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Client: 	Connecting to server
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Client: 	Connected to server
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Client: 	Getting response code from server
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Client: 	Response code 200 returned
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Client: 	Getting input stream from server
+[Fri May 28 23:00:10 MDT 2021] - INFO client.Client: 	Reading input stream into a string
